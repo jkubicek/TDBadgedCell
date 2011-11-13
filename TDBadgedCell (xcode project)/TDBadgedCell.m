@@ -84,11 +84,7 @@
 - (void) dealloc
 {
 	parent = nil;
-	[badgeString release];
-	[badgeColor release];
-	[badgeColorHighlighted release];
 	
-	[super dealloc];
 }
 
 @end
@@ -221,14 +217,6 @@
 	}
 }
 
-- (void)dealloc {
-	[badge release];
-	[badgeColor release];
-	[badgeString release];
-	[badgeColorHighlighted release];
-	
-    [super dealloc];
-}
 
 
 @end
