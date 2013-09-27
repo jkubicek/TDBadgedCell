@@ -18,8 +18,6 @@
 {
 	NSUInteger width;
 	NSString *badgeString;
-
-	UITableViewCell *__unsafe_unretained parent;
 	
 	UIColor *badgeColor;
 	UIColor *badgeColorHighlighted;	
@@ -27,7 +25,7 @@
 
 @property (nonatomic, readonly) NSUInteger width;
 @property (nonatomic, strong) NSString *badgeString;
-@property (nonatomic, unsafe_unretained) UITableViewCell *parent;
+@property (nonatomic, weak) UITableViewCell *parent;
 @property (nonatomic, strong) UIColor *badgeColor;
 @property (nonatomic, strong) UIColor *badgeColorHighlighted;
 

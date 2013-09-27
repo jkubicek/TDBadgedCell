@@ -39,7 +39,7 @@
 {	
 	NSString *countString = self.badgeString;
 	
-	CGSize numberSize = [countString sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
+	CGSize numberSize = [countString sizeWithAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize: 14]}];
 	
 	self.width = numberSize.width + 16;
 	
@@ -77,8 +77,8 @@
 	bounds.origin.x = (bounds.size.width - numberSize.width) / 2.0f + 0.5f;
 	
 	CGContextSetBlendMode(context, kCGBlendModeClear);
-	
-	[countString drawInRect:bounds withFont:[UIFont boldSystemFontOfSize: 14]];
+
+    [countString drawInRect:bounds withAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize: 14]}];
 }
 
 - (void) dealloc
@@ -137,7 +137,7 @@
 			[self.badge setHidden:NO];
 		
 		
-		CGSize badgeSize = [self.badgeString sizeWithFont:[UIFont boldSystemFontOfSize: 14]];
+		CGSize badgeSize = [self.badgeString sizeWithAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize: 14]}];
 		
 		float version = [[[UIDevice currentDevice] systemVersion] floatValue];
 		
